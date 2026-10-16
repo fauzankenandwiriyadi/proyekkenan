@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMP - SMA Insan Cendekia Al Mujtaba Sukoharjo</title>
+    <title>SMP - SMA Insan Cendekia Al Mujtaba Sukoharjo (ICBS)</title>
+    <!-- Favicon Sekolah -->
+    <link rel="icon" type="image/png" href="aset/logo.png">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -14,11 +18,11 @@
     <div class="top-bar">
         <div class="container top-bar-flex">
             <div class="contact-info">
-                <span><i class="fa fa-phone"></i> (0271) 6727516</span>
-                <span><i class="fa fa-envelope"></i> smaic.almujtaba@yahoo.com</span>
+                <span><i class="fa fa-phone"></i> (0271) 6727516 / 6727301</span>
+                <span><i class="fa fa-envelope"></i> insancendekia678@gmail.com</span>
             </div>
             <div class="ppdb-badge">
-                <span>PPDB 2026/2027 Dibuka!</span>
+                <span>PPDB 2026/2027 Resmi Dibuka!</span>
                 <a href="#ppdb" class="btn-animate">Daftar Sekarang</a>
             </div>
         </div>
@@ -28,7 +32,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-flex">
             <div class="brand">
-                <div class="brand-logo">ICBS</div>
+                <img src="aset/logo.png" alt="Logo ICBS" class="brand-logo-img">
                 <div class="brand-text">
                     <h1>IC AL MUJTABA</h1>
                     <p>Sukoharjo, Jawa Tengah</p>
@@ -37,9 +41,11 @@
             <div class="nav-links" id="navLinks">
                 <a href="#" class="active btn-animate">Beranda</a>
                 <a href="#profil" class="btn-animate">Profil & Alamat</a>
-                <a href="#event" class="btn-animate">Event (MAPETRA & ICEF)</a>
+                <a href="#pendidikan" class="btn-animate">Program</a>
+                <a href="#eskul" class="btn-animate">Eskul</a>
+                <a href="#beasiswa" class="btn-animate">Beasiswa</a>
+                <a href="#event" class="btn-animate">Event</a>
                 <a href="#prestasi" class="btn-animate">Prestasi</a>
-                <a href="#alumni" class="btn-animate">Data Alumni</a>
                 <a href="#ppdb" class="btn-nav btn-animate">PPDB Online</a>
             </div>
             <button class="menu-toggle btn-animate" id="menuToggle" aria-label="Toggle Menu">
@@ -50,13 +56,13 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container hero-content">
+        <div class="container hero-content animate-on-load">
             <span class="hero-tag">Islamic & International Standard Boarding School</span>
             <h2>Membentuk Generasi Unggul, Cerdas, dan Berkarakter Qur'ani</h2>
-            <p>Pusat pendidikan kader pemimpin masa depan di bawah naungan Yayasan Al Mujtaba Indonesia Sukoharjo.</p>
+            <p>Pusat pendidikan kader pemimpin masa depan berstandar global di bawah naungan Yayasan Al Mujtaba Indonesia Sukoharjo.</p>
             <div class="hero-buttons">
-                <a href="#ppdb" class="btn btn-warning btn-animate">Informasi PPDB</a>
-                <a href="#profil" class="btn btn-outline btn-animate">Tentang Kami</a>
+                <a href="#ppdb" class="btn btn-warning btn-animate"><i class="fa fa-user-plus"></i> Informasi PPDB</a>
+                <a href="#profil" class="btn btn-outline btn-animate"><i class="fa fa-info-circle"></i> Tentang Kami</a>
             </div>
         </div>
     </header>
@@ -64,44 +70,163 @@
     <!-- Profil & Alamat Section -->
     <section class="section bg-white" id="profil">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h3>Profil Sekolah & Alamat</h3>
-                <p>Mengenal lebih dekat lingkungan pendidikan berbasis pesantren terpadu.</p>
+                <p>Mengenal lebih dekat lingkungan pendidikan berbasis pesantren terpadu sejak tahun 2010.</p>
             </div>
             <div class="grid-2">
-                <div class="profile-desc">
-                    <h4 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">Visi & Karakter Utama</h4>
-                    <p style="margin-bottom: 15px; color: var(--text-muted);">SMP - SMA Insan Cendekia Al Mujtaba Sukoharjo mengintegrasikan Kurikulum Nasional, Kurikulum Pesantren, serta pembinaan kepemimpinan (*leadership*) secara komprehensif.</p>
-                    <p style="color: var(--text-muted);">Didukung oleh tenaga pendidik profesional dan lingkungan asrama (*boarding*) yang kondusif, aman, serta Islami untuk mengoptimalkan potensi akademik dan spiritual santri.</p>
+                <div class="profile-img-col reveal-left">
+                    <div class="img-placeholder">
+                        <i class="fa fa-image"></i>
+                        <span>Placeholder: aset/img/profil-sekolah.jpg</span>
+                    </div>
+                    <p style="font-size: 12px; color: var(--text-muted); text-align: center;">Suasana lingkungan kampus & asrama ICBS Sukoharjo.</p>
                 </div>
-                <div class="profile-address card" style="text-align: left; background: #f0fdf4;">
-                    <h4 style="color: var(--primary); margin-bottom: 15px;"><i class="fa fa-map-marker-alt" style="margin-right: 8px;"></i> Alamat & Lokasi</h4>
-                    <p style="margin-bottom: 10px; color: var(--text-dark);"><strong>Jl. Ovensari Raya, Kadilangu</strong></p>
-                    <p style="margin-bottom: 10px; color: var(--text-muted);">Kecamatan Baki, Kabupaten Sukoharjo</p>
-                    <p style="margin-bottom: 15px; color: var(--text-muted);">Jawa Tengah, Kode Pos 57556</p>
-                    <p style="font-size: 13px; color: var(--primary-light);"><i class="fa fa-clock"></i> Jam Layanan: Senin - Sabtu (07.00 - 15.30 WIB)</p>
+
+                <div class="profile-desc reveal-right">
+                    <h4 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">Visi & Karakter Utama</h4>
+                    <p style="margin-bottom: 15px; color: var(--text-muted);">SMP - SMA Insan Cendekia Al Mujtaba (ICBS) Sukoharjo mengintegrasikan Kurikulum Nasional, Kurikulum Pesantren (Diniyah), serta pembinaan kepemimpinan (*leadership*) secara komprehensif.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Didukung oleh tenaga pendidik profesional dan lingkungan asrama (*boarding*) yang kondusif, aman, serta Islami guna mengoptimalkan potensi akademik dan spiritual santri secara maksimal.</p>
+                    
+                    <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #dcfce7;">
+                        <h5 style="color: var(--primary); margin-bottom: 5px;"><i class="fa fa-map-marker-alt"></i> Alamat & Lokasi</h5>
+                        <p style="font-size: 13px; color: var(--text-dark);"><strong>Jl. Ovensari Raya / No. 9, Kadilangu, Kec. Baki, Kab. Sukoharjo, Jawa Tengah 57556</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Pendidikan Section -->
+    <section class="section" id="pendidikan" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h3>Jenjang & Program Pendidikan</h3>
+                <p>Fasilitas pembelajaran terstruktur untuk jenjang Sekolah Menengah Pertama dan Menengah Atas.</p>
+            </div>
+            <div class="grid-2">
+                <div class="card reveal-left" style="background: white;">
+                    <div class="img-placeholder">
+                        <i class="fa fa-image"></i>
+                        <span>Placeholder: aset/img/smp-icbs.jpg</span>
+                    </div>
+                    <div class="card-icon" style="margin-top: 10px;"><i class="fa fa-graduation-cap"></i></div>
+                    <h4 style="color: var(--primary); margin: 15px 0 10px 0;">SMP Insan Cendekia Al Mujtaba</h4>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">Menggunakan Kurikulum Merdeka yang disinergikan dengan penguatan pondasi keislaman, tahfidzul Quran, serta pembinaan karakter mandiri santri.</p>
+                    <span style="font-size: 13px; color: var(--primary-light); font-weight: 600;"><i class="fa fa-check-circle"></i> Full Day & Boarding System</span>
+                </div>
+                <div class="card reveal-right" style="background: white;">
+                    <div class="img-placeholder">
+                        <i class="fa fa-image"></i>
+                        <span>Placeholder: aset/img/sma-icbs.jpg</span>
+                    </div>
+                    <div class="card-icon" style="margin-top: 10px;"><i class="fa fa-book-open"></i></div>
+                    <h4 style="color: var(--primary); margin: 15px 0 10px 0;">SMA Insan Cendekia Al Mujtaba</h4>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 15px;">Fokus pada pendalaman sains, teknologi, bahasa asing, serta persiapan intensif masuk Perguruan Tinggi Negeri (PTN) favorit dan luar negeri.</p>
+                    <span style="font-size: 13px; color: var(--primary-light); font-weight: 600;"><i class="fa fa-check-circle"></i> Program Unggulan SNBP / UTBK</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ekstrakurikuler (Eskul) Section [BARU] -->
+    <section class="section bg-white" id="eskul">
+        <div class="container">
+            <div class="section-title reveal">
+                <h3>Ekstrakurikuler & Pengembangan Bakat</h3>
+                <p>Mengasah keterampilan non-akademik, kepemimpinan, serta potensi minat santri secara optimal.</p>
+            </div>
+            <div class="eskul-grid reveal">
+                <div class="eskul-item">
+                    <i class="fa fa-book-quran"></i>
+                    <h4>Tahfidz & Tilawah</h4>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Pendalaman hafalan Al-Qur'an dan seni baca quran.</p>
+                </div>
+                <div class="eskul-item">
+                    <i class="fa fa-comments"></i>
+                    <h4>English & Arabic Club</h4>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Debat, public speaking, dan percakapan bahasa asing.</p>
+                </div>
+                <div class="eskul-item">
+                    <i class="fa fa-flask"></i>
+                    <h4>Klub Olimpiade Sains</h4>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Persiapan kompetisi Matematika, Fisika, Biologi, dll.</p>
+                </div>
+                <div class="eskul-item">
+                    <i class="fa fa-futbol"></i>
+                    <h4>Olahraga (Futsal/Pasti)</h4>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Pembinaan fisik, futsal, bulu tangkis, dan bela diri.</p>
+                </div>
+                <div class="eskul-item">
+                    <i class="fa fa-palette"></i>
+                    <h4>Seni & Kriya (FLS2N)</h4>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Komik digital, seni rupa, teater, dan jurnalistik.</p>
+                </div>
+                <div class="eskul-item">
+                    <i class="fa fa-laptop-code"></i>
+                    <h4>IT & Multimedia</h4>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Desain grafis, videografi, dan dasar pemrograman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jalur Beasiswa PPDB Section [BARU] -->
+    <section class="section" id="beasiswa" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h3>Jalur Beasiswa Pendidikan</h3>
+                <p>Berbagai kemudahan dan apresiasi bagi calon santri berprestasi serta berdedikasi tinggi.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card reveal" style="background: white; text-align: left;">
+                    <span class="badge-beasiswa"><i class="fa fa-award"></i> Jalur Prestasi</span>
+                    <h4 style="color: var(--primary); margin-bottom: 10px;">Beasiswa Prestasi Akademik / Non-Akademik</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+                        Diberikan kepada calon santri yang memiliki peringkat kelas paralel unggulan atau pemenang kejuaraan lomba tingkat kabupaten/provinsi/nasional.
+                    </p>
+                </div>
+                <div class="card reveal" style="background: white; text-align: left; animation-delay: 0.1s;">
+                    <span class="badge-beasiswa" style="background: #fef3c7; color: #b45309;"><i class="fa fa-quran"></i> Jalur Tahfidz</span>
+                    <h4 style="color: var(--primary); margin-bottom: 10px;">Beasiswa Hafizh Al-Qur'an</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+                        Khusus calon santri dengan pencapaian hafalan Al-Qur'an minimal jumlah juz tertentu (melalui tes verifikasi/munaqasyah langsung).
+                    </p>
+                </div>
+                <div class="card reveal" style="background: white; text-align: left; animation-delay: 0.2s;">
+                    <span class="badge-beasiswa" style="background: #dcfce7; color: #166534;"><i class="fa fa-hands-holding-child"></i> Jalur Sosial / Khusus</span>
+                    <h4 style="color: var(--primary); margin-bottom: 10px;">Beasiswa Kader / Yatim Dhuafa</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+                        Wujud kepedulian yayasan untuk memberikan kesempatan menimba ilmu bagi anak yatim atau kader potensial yang memenuhi syarat administratif.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Event Khusus: MAPETRA & ICEF -->
-    <section class="section" id="event" style="background-color: #f8fafc;">
+    <section class="section bg-white" id="event">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h3>Event Unggulan Sekolah</h3>
                 <p>Wadah pengembangan bakat, kreativitas, dan jiwa kepemimpinan santri.</p>
             </div>
             <div class="grid-2">
-                <div class="card" style="text-align: left; background: white;">
-                    <div class="card-icon" style="margin: 0 0 20px 0;"><i class="fa fa-theater-masks"></i></div>
+                <div class="card reveal-left" style="text-align: left; background: #f0fdf4;">
+                    <div class="img-placeholder">
+                        <i class="fa fa-image"></i>
+                <img src="aset/img/event-mapetra.jpg" alt="event mapetra">
+                    </div>
                     <h4 style="color: var(--primary); margin-bottom: 10px;">MAPETRA (Malam Pertunjukan Talenta & Kreasi)</h4>
                     <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">
                         Ajang tahunan bergengsi di mana para murid belajar langsung mengelola sebuah *event* besar. Menampilkan pentas seni kreatif, teater, musikal, dan pameran karya seni rupa.
                     </p>
                 </div>
-                <div class="card" style="text-align: left; background: white;">
-                    <div class="card-icon" style="margin: 0 0 20px 0;"><i class="fa fa-star"></i></div>
+                <div class="card reveal-right" style="text-align: left; background: #f0fdf4;">
+                    <div class="img-placeholder">
+                        <i class="fa fa-image"></i>
+                        <span>Placeholder: aset/img/event-icef.jpg</span>
+                    </div>
                     <h4 style="color: var(--primary); margin-bottom: 10px;">ICEF (Insan Cendekia Festival)</h4>
                     <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">
                         Festival akbar yang memuat berbagai perlombaan akademik dan non-akademik antar pelajar sebagai wadah penumbuhan jiwa sportivitas dan unjuk prestasi.
@@ -111,19 +236,19 @@
         </div>
     </section>
 
-    <!-- Statistik Counter Berulang (Naik Saat Dilihat, Reset Saat Ditinggal) -->
-    <section class="stats-section">
+    <!-- Statistik Counter Berulang -->
+    <section class="stats-section reveal">
         <div class="container grid-4">
             <div class="stat-item">
-                <h3 class="counter" data-target="15">0</h3>
-                <p>Tahun Pengalaman</p>
+                <h3 class="counter" data-target="16">0</h3>
+                <p>Tahun Pengalaman (Sejak 2010)</p>
             </div>
             <div class="stat-item">
                 <h3><span class="counter" data-target="500">0</span>+</h3>
                 <p>Santri Aktif Berprestasi</p>
             </div>
             <div class="stat-item">
-                <h3 class="counter" data-target="50">0</h3>
+                <h3><span class="counter" data-target="50">0</span></h3>
                 <p>Guru & Pembina Profesional</p>
             </div>
             <div class="stat-item">
@@ -136,22 +261,34 @@
     <!-- Prestasi Section -->
     <section class="section bg-white" id="prestasi">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h3>Prestasi Santri & Sekolah</h3>
                 <p>Rekam jejak membanggakan di tingkat regional hingga nasional.</p>
             </div>
             <div class="grid-3">
-                <div class="card" style="text-align: left;">
+                <div class="card reveal" style="text-align: left;">
+                    <div class="img-placeholder" style="height: 150px;">
+                        <i class="fa fa-image" style="font-size: 24px;"></i>
+                        <span style="font-size: 11px;">aset/img/prestasi-1.jpg</span>
+                    </div>
                     <span style="background: var(--accent); color: #111; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Nasional</span>
                     <h4 style="margin-top: 10px;">Olimpiade Sains & Bahasa</h4>
                     <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Meraih Medali Emas Olimpiade Sains Siswa Nasional Bidang Bahasa Inggris serta kompetisi biologi.</p>
                 </div>
-                <div class="card" style="text-align: left;">
+                <div class="card reveal" style="text-align: left; animation-delay: 0.1s;">
+                    <div class="img-placeholder" style="height: 150px;">
+                        <i class="fa fa-image" style="font-size: 24px;"></i>
+                        <span style="font-size: 11px;">aset/img/prestasi-2.jpg</span>
+                    </div>
                     <span style="background: var(--accent); color: #111; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Provinsi</span>
                     <h4 style="margin-top: 10px;">Juara Umum FLS2N Sukoharjo</h4>
                     <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Memborong juara pertama dalam ajang FLS2N meliputi cabang lomba Komik Digital, Jurnalistik, dan Kriya.</p>
                 </div>
-                <div class="card" style="text-align: left;">
+                <div class="card reveal" style="text-align: left; animation-delay: 0.2s;">
+                    <div class="img-placeholder" style="height: 150px;">
+                        <i class="fa fa-image" style="font-size: 24px;"></i>
+                        <span style="font-size: 11px;">aset/img/prestasi-3.jpg</span>
+                    </div>
                     <span style="background: var(--accent); color: #111; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Akademik</span>
                     <h4 style="margin-top: 10px;">Penerimaan SNBP Tertinggi</h4>
                     <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Mencatatkan persentase penerimaan siswa ke Perguruan Tinggi Negeri (PTN) jalur SNBP tertinggi.</p>
@@ -160,29 +297,15 @@
         </div>
     </section>
 
-    <!-- Data Alumni Section -->
-    <section class="section" id="alumni" style="background-color: #f9fafb;">
-        <div class="container">
-            <div class="section-title">
-                <h3>Data & Jejak Alumni</h3>
-                <p>Alumni tersebar di berbagai perguruan tinggi ternama dan berkiprah di masyarakat.</p>
-            </div>
-            <div class="grid-3" style="text-align: center;">
-                <div class="card" style="background: white;">
-                    <i class="fa fa-university" style="font-size: 32px; color: var(--primary); margin-bottom: 15px;"></i>
-                    <h4 style="font-size: 16px; margin-bottom: 8px;">PTN Favorit Dalam Negeri</h4>
-                    <p style="font-size: 13px; color: var(--text-muted);">Alumni diterima di UI, UGM, ITB, Undip, ITS, UNS, dan universitas negeri unggulan lainnya.</p>
-                </div>
-                <div class="card" style="background: white;">
-                    <i class="fa fa-shield-alt" style="font-size: 32px; color: var(--primary); margin-bottom: 15px;"></i>
-                    <h4 style="font-size: 16px; margin-bottom: 8px;">Sekolah Kedinasan</h4>
-                    <p style="font-size: 13px; color: var(--text-muted);">Banyak lulusan menembus seleksi instansi kedinasan seperti STAN, STIS, Poltek SSN, dan IPDN.</p>
-                </div>
-                <div class="card" style="background: white;">
-                    <i class="fa fa-globe" style="font-size: 32px; color: var(--primary); margin-bottom: 15px;"></i>
-                    <h4 style="font-size: 16px; margin-bottom: 8px;">Studi & Peran Global</h4>
-                    <p style="font-size: 13px; color: var(--text-muted);">Sebagian alumni melanjutkan studi luar negeri serta aktif menjadi wirausahawan muda.</p>
-                </div>
+    <!-- PPDB Section / Call to Action -->
+    <section class="section" id="ppdb" style="background: linear-gradient(135deg, var(--primary) 0%, #022c22 100%); color: white; text-align: center;">
+        <div class="container" style="max-width: 700px;">
+            <span class="hero-tag">Pendaftaran Murid Baru</span>
+            <h3 style="font-size: 30px; margin-bottom: 15px; color: white;">Pendaftaran PPDB ICBS Sukoharjo Tahun 2026/2027</h3>
+            <p style="color: #d1fae5; margin-bottom: 30px; font-size: 15px;">Amankan kursi putra-putri tercinta Anda di lingkungan sekolah Islam berstandar internasional. Kuota terbatas setiap gelombangnya!</p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="https://sma.insancendekiaska.org" target="_blank" class="btn btn-warning btn-animate"><i class="fa fa-globe"></i> Kunjungi Website Resmi</a>
+                <a href="https://wa.me/6280000000000" target="_blank" class="btn btn-outline btn-animate"><i class="fab fa-whatsapp"></i> Hubungi Panitia PPDB</a>
             </div>
         </div>
     </section>
@@ -191,22 +314,27 @@
     <footer class="footer">
         <div class="container grid-footer">
             <div>
-                <h4>SMP - SMA Insan Cendekia Al Mujtaba</h4>
+                <div class="footer-brand-flex">
+                    <img src="aset/logo.png" alt="Logo ICBS" class="footer-logo-img">
+                    <h4 style="margin-bottom: 0;">SMP - SMA Insan Cendekia Al Mujtaba</h4>
+                </div>
                 <p>Jl. Ovensari Raya, Kadilangu, Kec. Baki, Kabupaten Sukoharjo, Jawa Tengah 57556.</p>
             </div>
             <div>
                 <h4>Tautan Cepat</h4>
                 <ul class="footer-links">
                     <li><a href="#profil" class="btn-animate">Profil & Alamat</a></li>
-                    <li><a href="#event" class="btn-animate">Event MAPETRA & ICEF</a></li>
+                    <li><a href="#pendidikan" class="btn-animate">Program Pendidikan</a></li>
+                    <li><a href="#eskul" class="btn-animate">Ekstrakurikuler</a></li>
+                    <li><a href="#beasiswa" class="btn-animate">Jalur Beasiswa</a></li>
                     <li><a href="#prestasi" class="btn-animate">Prestasi Siswa</a></li>
-                    <li><a href="#alumni" class="btn-animate">Data Alumni</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Hubungi Kami</h4>
-                <p><i class="fa fa-phone"></i> (0271) 6727516</p>
-                <p><i class="fa fa-envelope"></i> smaic.almujtaba@yahoo.com</p>
+                <p><i class="fa fa-phone"></i> (0271) 6727516 / 6727301</p>
+                <p><i class="fa fa-envelope"></i> insancendekia678@gmail.com</p>
+                <p><i class="fa fa-globe"></i> insancendekiaska.org</p>
             </div>
         </div>
         <div class="footer-bottom">

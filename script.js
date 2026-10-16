@@ -23,14 +23,34 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Logika Animasi Angka Berulang (Naik Saat Dilihat, Reset Saat Keluar Layar)
+// --- ANIMASI SCROLL REVEAL ---
+const observerOptions = {
+    root: null,
+    threshold: 0.15
+};
+
+const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    scrollObserver.observe(el);
+});
+
+// --- ANIMASI COUNTER ANGKA BERULANG ---
 const counters = document.querySelectorAll('.counter');
 const statsSection = document.querySelector('.stats-section');
 
 function runCounter(counter) {
     const target = +counter.getAttribute('data-target');
     let count = 0;
-    const speed = target / 40; // Kecepatan hitungan naik
+    const speed = target / 40; 
 
     function updateCount() {
         count += speed;
@@ -44,27 +64,20 @@ function runCounter(counter) {
     updateCount();
 }
 
-const observerOptions = {
-    root: null,
-    threshold: 0.3 // Berjalan ketika 30% bagian statistik terlihat di layar
-};
-
-const statsObserver = new IntersectionObserver((entries, observer) => {
+const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // Ketika dilihat (masuk layar dari arah mana pun), jalankan hitungan naik
             counters.forEach(counter => {
-                counter.innerText = '0'; // Reset ke 0 sebelum naik
+                counter.innerText = '0';
                 runCounter(counter);
             });
         } else {
-            // Ketika tidak dilihat (keluar layar ke atas/bawah), reset ke 0 kembali
             counters.forEach(counter => {
                 counter.innerText = '0';
             });
         }
     });
-}, observerOptions);
+}, { threshold: 0.3 });
 
 if (statsSection) {
     statsObserver.observe(statsSection);
