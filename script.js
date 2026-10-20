@@ -1,4 +1,6 @@
-// Toggle Menu Mobile
+// ==========================================
+// 1. TOGGLE MENU MOBILE
+// ==========================================
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
@@ -14,6 +16,7 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
+// Tutup menu mobile ketika salah satu link diklik
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -23,7 +26,10 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// --- ANIMASI SCROLL REVEAL ---
+
+// ==========================================
+// 2. ANIMASI SCROLL REVEAL
+// ==========================================
 const observerOptions = {
     root: null,
     threshold: 0.15
@@ -43,7 +49,10 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => 
     scrollObserver.observe(el);
 });
 
-// --- ANIMASI COUNTER ANGKA BERULANG ---
+
+// ==========================================
+// 3. ANIMASI COUNTER ANGKA BERULANG
+// ==========================================
 const counters = document.querySelectorAll('.counter');
 const statsSection = document.querySelector('.stats-section');
 
@@ -82,3 +91,43 @@ const statsObserver = new IntersectionObserver((entries) => {
 if (statsSection) {
     statsObserver.observe(statsSection);
 }
+
+
+// ==========================================
+// 4. INTERAKSI KLIK ESKUL PREVIEW GAMBAR (MODAL)
+// ==========================================
+const eskulItems = document.querySelectorAll('.eskul-item');
+const eskulModal = document.getElementById('eskulModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const eskulClose = document.querySelector('.eskul-close');
+
+eskulItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const imgSrc = item.getAttribute('data-img');
+        const imgTitle = item.getAttribute('data-title');
+
+        if (modalImg && modalTitle && eskulModal) {
+            modalImg.src = imgSrc;
+            modalTitle.innerText = imgTitle;
+            eskulModal.classList.add('show');
+        }
+    });
+});
+
+function closeModal() {
+    if (eskulModal) {
+        eskulModal.classList.remove('show');
+    }
+}
+
+if (eskulClose) {
+    eskulClose.addEventListener('click', closeModal);
+}
+
+// Tutup modal jika pengguna mengklik area luar kotak modal
+window.addEventListener('click', (e) => {
+    if (e.target === eskulModal) {
+        closeModal();
+    }
+});
