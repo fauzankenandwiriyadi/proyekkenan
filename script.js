@@ -4,27 +4,29 @@
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-    if (navLinks.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-    } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-    }
-});
-
-// Tutup menu mobile ketika salah satu link diklik
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
         const icon = menuToggle.querySelector('i');
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
+        if (navLinks.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
     });
-});
+
+    // Tutup menu mobile ketika salah satu link diklik
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        });
+    });
+}
 
 
 // ==========================================
@@ -94,7 +96,7 @@ if (statsSection) {
 
 
 // ==========================================
-// 4. INTERAKSI KLIK ESKUL PREVIEW GAMBAR (MODAL)
+// 4. INTERAKSI KLIK ESKUL PREVIEW GAMBAR (DENGAN LOADING LOGO BERPUTAR)
 // ==========================================
 const eskulItems = document.querySelectorAll('.eskul-item');
 const eskulModal = document.getElementById('eskulModal');
@@ -102,15 +104,40 @@ const modalImg = document.getElementById('modalImg');
 const modalTitle = document.getElementById('modalTitle');
 const eskulClose = document.querySelector('.eskul-close');
 
+// Buat elemen loading dengan logo sekolah secara dinamis di dalam modal
+let modalContainer = document.querySelector('.modal-img-container');
+let loadingIndicator = document.createElement('div');
+loadingIndicator.className = 'eskul-loading';
+loadingIndicator.innerHTML = `
+    <img src="aset/logo.png" alt="Loading Logo" class="loading-logo-spin">
+    <span>Memuat dokumentasi...</span>
+`;
+if (modalContainer) {
+    modalContainer.appendChild(loadingIndicator);
+}
+
 eskulItems.forEach(item => {
     item.addEventListener('click', () => {
         const imgSrc = item.getAttribute('data-img');
         const imgTitle = item.getAttribute('data-title');
 
         if (modalImg && modalTitle && eskulModal) {
-            modalImg.src = imgSrc;
             modalTitle.innerText = imgTitle;
+            modalImg.style.opacity = '0'; // Sembunyikan gambar sebentar
+            loadingIndicator.classList.add('show-load'); // Munculkan logo berputar
             eskulModal.classList.add('show');
+
+            // Simulasi jeda agar animasi logo terasa mulus dan estetik
+            setTimeout(() => {
+                modalImg.src = imgSrc;
+                modalImg.onload = () => {
+                    modalImg.style.opacity = '1';
+                    loadingIndicator.classList.remove('show-load');
+                };
+                // Fallback jika gambar sudah ada di cache browser
+                modalImg.style.opacity = '1';
+                loadingIndicator.classList.remove('show-load');
+            }, 500);
         }
     });
 });
@@ -118,6 +145,7 @@ eskulItems.forEach(item => {
 function closeModal() {
     if (eskulModal) {
         eskulModal.classList.remove('show');
+        loadingIndicator.classList.remove('show-load');
     }
 }
 

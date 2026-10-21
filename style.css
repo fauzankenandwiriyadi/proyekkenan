@@ -12,7 +12,7 @@
 }
 
 /* Reset Global */
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -89,7 +89,6 @@ body {
 
 /* --- EFEK HOVER KELAS ATAS (LUXURY HOVER EFFECTS) --- */
 
-/* 1. Zoom Gambar Mewah (Perlahan & Elegan) */
 .hover-zoom {
     overflow: hidden;
     border-radius: 12px;
@@ -104,7 +103,6 @@ body {
     transform: scale(1.06);
 }
 
-/* 2. Kartu Melayang Berkelas (Luxury Card Lift) */
 .hover-lift, .card, .eskul-item {
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
 }
@@ -115,7 +113,6 @@ body {
     border-color: rgba(4, 120, 87, 0.3);
 }
 
-/* 3. Tombol Berkelas (Smooth Magnetic Feel) */
 .btn-animate {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -234,7 +231,6 @@ body {
     position: relative;
 }
 
-/* Garis bawah animasi hover menu navigasi ala web mewah */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -267,10 +263,6 @@ body {
     display: none !important;
 }
 
-.btn-nav:hover {
-    opacity: 0.95;
-}
-
 .menu-toggle {
     display: none;
     background: none;
@@ -280,32 +272,44 @@ body {
     cursor: pointer;
 }
 
-/* Hero Section Mewah */
+/* Hero Section dengan Background Video */
 .hero {
-    background: linear-gradient(135deg, #022c22 0%, var(--primary) 50%, #064e3b 100%);
-    color: var(--white);
-    padding: 120px 0;
-    text-align: center;
     position: relative;
+    color: var(--white);
+    padding: 140px 0;
+    text-align: center;
     overflow: hidden;
+    background-color: #022c22;
 }
 
-.hero::before {
-    content: '';
+.hero-video {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
     top: 0;
     left: 0;
-    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(2, 44, 34, 0.55) 0%, rgba(6, 78, 59, 0.45) 100%);
+    z-index: 2;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-tag {
@@ -587,7 +591,7 @@ body {
     color: var(--primary-light);
 }
 
-/* --- MODAL PREVIEW ESKUL BERKELAS --- */
+/* --- MODAL PREVIEW ESKUL BERKELAS (DENGAN LOADING LOGO) --- */
 .eskul-modal {
     display: none;
     position: fixed;
@@ -650,6 +654,8 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    position: relative;
+    cursor: pointer;
 }
 
 #modalImg {
@@ -658,6 +664,11 @@ body {
     object-fit: cover;
     border-radius: 10px;
     display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#modalImg:hover {
+    transform: scale(1.08);
 }
 
 #modalTitle {
@@ -665,6 +676,56 @@ body {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 6px;
+}
+
+/* --- INDIKATOR LOADING DENGAN LOGO SEKOLAH --- */
+.eskul-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(6, 78, 59, 0.92);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    backdrop-filter: blur(6px);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.eskul-loading.show-load {
+    opacity: 1;
+}
+
+.loading-logo-spin {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    animation: logoSpinPulse 1.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes logoSpinPulse {
+    0% {
+        transform: scale(0.85) rotate(0deg);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.15) rotate(180deg);
+        filter: brightness(1.2);
+    }
+    100% {
+        transform: scale(0.85) rotate(360deg);
+        filter: brightness(1);
+    }
 }
 
 /* Responsif HP / Tablet */
