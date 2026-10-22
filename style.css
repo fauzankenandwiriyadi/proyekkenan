@@ -19,6 +19,33 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* --- FIX FONT AWESOME AGAR TIDAK MEWARISI FONT BODY --- */
+[class^="fa-"], [class*=" fa-"], 
+.fa, .fas, .far, .fal, .fat, .fad, .fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+
+.fas, .fa-solid {
+    font-family: "Font Awesome 6 Solid" !important;
+    font-weight: 900 !important;
+}
+
+.far, .fa-regular {
+    font-family: "Font Awesome 6 Regular" !important;
+    font-weight: 400 !important;
+}
+
+.fab, .fa-brands {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
 html {
     scroll-behavior: smooth;
 }

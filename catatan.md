@@ -24,3 +24,5 @@ itu warna nya masih hijau pekat buat lebih trasnparan
 saya ada eror di bagian logo eskul dan pengembangan bakat fasilitas unggulan kampus serta logo di bagian inofrmasi ppdb dan tentang kami
  ini itu ada logo di bagian eskul dan pengembangan bakat serta di infromasi ppdb dan tentang kami nah itu kamu masukkan ke css yang sudah kamu buat itu 
 di bagian eskul dan pengembangan bakat dan fasilitas unggulan kampus dan informasi ppdb dan tentang kami tu ada persegi panjang nah nyakosong tolong ditambahi logo
+di bagian css tolong agar menjaga pseudo element ikon font awesome tetap memakai font ikon , bukan mewarisi font text dari body
+
