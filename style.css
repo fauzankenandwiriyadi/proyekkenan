@@ -37,6 +37,36 @@ body {
     padding: 0 20px;
 }
 
+/* --- ORNAMEN WATERMARK LOGO DI KOTAK PERSEGI PANJANG --- */
+.card-ornament-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-logo-ornament {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    opacity: 0.06; /* Transparan lembut seperti watermark */
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card-ornament-box:hover .card-logo-ornament {
+    transform: scale(1.1) rotate(-8deg);
+    opacity: 0.1;
+}
+
+/* Memastikan teks/elemen di dalam card berada di atas ornamen */
+.card-ornament-box > *:not(.card-logo-ornament) {
+    position: relative;
+    z-index: 1;
+}
+
 /* --- ANIMASI MASUK AWAL HALAMAN (ENTRY ANIMATIONS) --- */
 .animate-on-load {
     animation: fadeInScale 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
