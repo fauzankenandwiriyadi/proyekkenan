@@ -25,4 +25,19 @@ saya ada eror di bagian logo eskul dan pengembangan bakat fasilitas unggulan kam
  ini itu ada logo di bagian eskul dan pengembangan bakat serta di infromasi ppdb dan tentang kami nah itu kamu masukkan ke css yang sudah kamu buat itu 
 di bagian eskul dan pengembangan bakat dan fasilitas unggulan kampus dan informasi ppdb dan tentang kami tu ada persegi panjang nah nyakosong tolong ditambahi logo
 di bagian css tolong agar menjaga pseudo element ikon font awesome tetap memakai font ikon , bukan mewarisi font text dari body
+olong di bagian css perbaiki masalah di font awsome
+saya minta kode lengkapnya cs nya
+jadi di css itu ikon awesome nya belum muncul, kemungkinan bertabrakan dengan font body di index html
+tolong buatkan kode lengkap html untuk font awsome di ganti hardcoded
+tolong sesuaikan ikon nya dengan tema sama kegiatan misal kayak eskul dan pengembangan bakat dan di Fasilitas Unggulan Kampus dan di bagian ikon smp dan sma kalau di eskul dan pengembangan bakat kayak it & multimedia itu gambar computer trus olaharaga gambar nya bola futsal dan seni karya nanti gambar kepingan puzzle trus di english dan arabain club itu nanti gambar speaker dan si sains itu gambarnya Erlenmeyer tahfidz dan tilawah gambar buku di buka trus di bagian kampus unggulan itu masjid ulul albad ikon nya masjid asrama resprsebtatit kayak gambar ikon ranjang tidur dan laboratrium gambar ikon catatan dan di bagian smp dan sma gambar ikon nya topi wisuda dan disetiap ikon pas kita sentuh nanti ikon nya kayak ada hover mouse animasi bergerak 
+gambarnya ikon kok masih kurang jelas jadi ada yang kayak kepotong
+minta kode full nya
+di bagian eskul dan pengembangan bakat iotu ikon nya masih kepotong mas piye ben ra keopotong
+tolong di bagian eskul dan pengembangan bakat itu ikon nya sama semua nah di bagian  English & Arabic Club jadi gambar ikon mikrofon trus  Klub Olimpiade Sains jadi gambar ikon botl Labu Erlenmeyer dan di bagian  Olahraga (Futsal/Pasti)  jadi gambar bola sepak bola dan di seni & kriya itu gambar ikon nya ganti jadi satu kepingan puzzzle udah itu aja  selain itu jangan di ganti dan saya minta kode full nya
+Tahfidz & Tilawah: Ikon Buku Terbuka
 
+Klub Olimpiade Sains: Ikon Botol Labu Erlenmeyer
+
+Olahraga (Futsal/Pasti): Ikon Bola Sepak yang ini saya minta ganti ikon karena ikon masih kepotong carilah tema ikon yang sama dengan apa yang dibahas di situ
+
+Untuk bagian Olahraga (Futsal/Pasti) agar ikon bolanya benar-benar pas, tidak gepeng, dan 

@@ -24,11 +24,11 @@
 .fa, .fas, .far, .fal, .fat, .fad, .fab {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
+    display: inline-block;
     font-style: normal;
     font-variant: normal;
-    line-height: 1;
     text-rendering: auto;
+    line-height: 1;
 }
 
 .fas, .fa-solid {
@@ -145,7 +145,6 @@ body {
 }
 
 /* --- EFEK HOVER KELAS ATAS (LUXURY HOVER EFFECTS) --- */
-
 .hover-zoom {
     overflow: hidden;
     border-radius: 12px;
